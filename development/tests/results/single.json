@@ -1,0 +1,62 @@
+{
+    "success_count": 10,
+    "success_rate": 1.0,
+    "requests": 10,
+    "avg_latency": 0.7630050897598266,
+    "min_latency": 0.38044261932373047,
+    "max_latency": 1.644399642944336,
+    "p50_latency": 0.6019009351730347,
+    "p95_latency": 1.5785398483276367,
+    "results": [
+        {
+            "status": 200,
+            "latency": 1.644399642944336,
+            "output_length": 876
+        },
+        {
+            "status": 200,
+            "latency": 0.5350258350372314,
+            "output_length": 835
+        },
+        {
+            "status": 200,
+            "latency": 0.4169728755950928,
+            "output_length": 813
+        },
+        {
+            "status": 200,
+            "latency": 0.6342015266418457,
+            "output_length": 851
+        },
+        {
+            "status": 200,
+            "latency": 1.5785398483276367,
+            "output_length": 1026
+        },
+        {
+            "status": 200,
+            "latency": 0.6048851013183594,
+            "output_length": 838
+        },
+        {
+            "status": 200,
+            "latency": 0.6705422401428223,
+            "output_length": 861
+        },
+        {
+            "status": 200,
+            "latency": 0.59891676902771,
+            "output_length": 847
+        },
+        {
+            "status": 200,
+            "latency": 0.566124439239502,
+            "output_length": 839
+        },
+        {
+            "status": 200,
+            "latency": 0.38044261932373047,
+            "output_length": 799
+        }
+    ]
+}
