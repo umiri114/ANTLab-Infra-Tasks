@@ -49,27 +49,19 @@ HTTP 客户端 / 测试脚本
 
 ### 3.2 模型信息
 
-| 项目 | 当前记录 |
+| 项目 | 实际配置 |
 |---|---|
 | 模型名称 | Qwen2.5-3B-Instruct |
-
-| GGUF 文件 | `qwen2.5-3b-instruct-q4_k_m.gguf` |
-
+| 模型文件 | `qwen2.5-3b-instruct-q4_k_m.gguf` |
+| 模型路径 | `/home/administrator/llama.cpp/models/qwen2.5-3b-instruct-q4_k_m.gguf` |
+| 模型来源 | [Qwen2.5-3B-Instruct-GGUF](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF) |
 | 量化格式 | Q4_K_M |
+| 文件大小 | 2,104,932,768 bytes |
+| SHA256 | `626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d` |
+| 模型训练上下文长度 | 32,768 tokens（以模型元数据为准） |
+| 实际服务上下文配置 | `-c 4096` |
+| GPU 卸载参数 | `-ngl 999`，实际日志确认 37/37 层卸载至 GPU |
 
-| 参数量 | 3,397,103,616（约 3.40B） |
-
-| 模型上下文训练长度 | 元数据 `n_ctx_train = 32768` |
-
-| 当前服务上下文参数 | `-c 4096` |
-
-| 模型 SHA256 | `626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d` | 
-
-| 模型来源参考页面： https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF |
-
-| 本地文件路径： /home/administrator/llama.cpp/models/qwen2.5-3b-instruct-q4_k_m.gguf |
-
-| 文件大小： 2,104,932,768 字节 |
 
 
 ## 4. GPU 卸载与 KV 缓存实测
