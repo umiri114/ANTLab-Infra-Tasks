@@ -51,7 +51,7 @@ Qwen2.5-3B-Instruct
 
 |项目|配置|
 |-|-|
-|操作系统|Ubuntu 22.04（WSL2）|
+|操作系统|Ubuntu 26.04（WSL2）|
 |GPU|NVIDIA GeForce RTX 4060 Laptop GPU|
 |GPU 显存|8188 MiB|
 |WSL 内存|约 7.6 GiB|
