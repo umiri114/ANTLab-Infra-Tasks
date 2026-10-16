@@ -1,0 +1,27 @@
+{
+  "workload_id": "office-summary-v1",
+  "description": "办公文档总结负载",
+  "prompt": {
+    "prompt_id": "office-summary-01",
+    "text": "请总结这个文件内容，提取项目进展、问题和下一步计划",
+    "input_file": "提示词与输入文档/输入文档/办公输入01-项目会议与进度资料.md",
+    "input_method": "file_path",
+    "file_version": "record_before_final_test",
+    "truncation_rule": "未单独配置截断规则；按当前 API 文件读取逻辑处理"
+  },
+  "benchmark": {
+    "single_requests": 10,
+    "concurrent_requests_per_level": 20,
+    "concurrency_levels": [1, 2, 4],
+    "warmup_requests": 1,
+    "repetitions": 1,
+    "request_order": "sequential submission; completion order may vary",
+    "random_seed": null,
+    "cache_policy": "not explicitly controlled; warmup performed before concurrency tests"
+  },
+  "results": {
+    "single": "tests/results/single.json",
+    "concurrent": "tests/results/concurrent.json",
+    "request_log": "results/requests.jsonl"
+  }
+}
