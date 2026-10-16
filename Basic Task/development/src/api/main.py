@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.responses import StreamingResponse
+from fastapi import FastAPI, HTTPException
 
 import requests
 import uuid
@@ -36,6 +37,7 @@ class ChatRequest(BaseModel):
 
     stream: bool = False
 
+    client_request_id: str | None = None
 
 
 def save_log(data):
@@ -108,10 +110,24 @@ def chat(request: ChatRequest):
 
         except Exception as e:
 
-            return {
-                "error": "file read failed",
-                "detail": str(e)
-            }
+            save_log({
+                
+                "run_id": request.run_id,
+                "request_id": request_id,
+                "prompt_id": request.prompt_id,
+                "file": request.file_path,
+                "status": "failed",
+                "error": f"file read failed: {str(e)}"
+    
+    
+            })
+
+            raise HTTPException(
+            
+            status_code=400,
+            detail=f"file read failed: {str(e)}"
+            
+            )
 
 
 
@@ -170,6 +186,7 @@ def chat(request: ChatRequest):
 
 
 
+        response.raise_for_status()
         result=response.json()
 
 

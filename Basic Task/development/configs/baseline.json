@@ -1,0 +1,52 @@
+{
+  "config_id": "baseline-v1",
+  "description": "ANTLab Infra Basic Task baseline configuration",
+  "created_at": "2026-10-16",
+  "model": {
+    "name": "Qwen2.5-3B-Instruct",
+    "file": "/home/administrator/llama.cpp/models/qwen2.5-3b-instruct-q4_k_m.gguf",
+    "quantization": "Q4_K_M",
+    "sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+  },
+  "runtime": {
+    "engine": "llama.cpp",
+    "server_binary": "/home/administrator/llama.cpp/build/bin/llama-server",
+    "server_url": "http://localhost:8080",
+    "context_size": 4096,
+    "gpu_layers": 999,
+    "flash_attention": "unknown",
+    "version": "0.6.0-dev",
+    "build_commit": "aa94f20"
+  },
+  "generation": {
+    "max_output_tokens": null,
+    "temperature": 0.7,
+    "top_p": null,
+    "seed": null,
+    "parameter_source": "temperature 在 FastAPI 请求代码中明确设置为 0.7；其他参数未在该请求代码中显式设置"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "vram_mib": 8188,
+    "wsl_ram_gib": 7.6
+  },
+  "benchmark": {
+    "single_requests": 10,
+    "concurrent_requests": 20,
+    "concurrency": [
+      1,
+      2,
+      4
+    ],
+    "warmup_requests": 1,
+    "repetitions": 1,
+    "concurrent_result_file": "tests/results/concurrent.json",
+    "single_result_file": "tests/results/single.json"
+  },
+  "tracking": {
+    "llama_cpp_commit": "aa94f2086147cd4bfbcff818ce998dffce5fcb39",
+    "repository_commit": "ec5f39631b6e457446275ed2ab52c4a1ed7120dd",
+    "results_directory": "results/",
+    "request_log": "results/requests.jsonl"
+  }
+}
