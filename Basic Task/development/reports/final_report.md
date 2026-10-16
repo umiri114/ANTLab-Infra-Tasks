@@ -7,7 +7,7 @@
 - 姓名：`[闫宇]`
 - 仓库：`https://github.com/umiri114/ANTLab-Infra-Tasks`
 - 分支：`master`
-- 最终提交 SHA：`[待最终提交完成后填写]`
+- 最终提交 SHA：`[57a6694cd7a4ce01b11dd382a10afa4d1ef4a422]`
 - 报告日期：2026-10-16
 - 项目目录：`Basic Task/development/`
 
